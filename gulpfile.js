@@ -32,7 +32,7 @@ gulp.task('uglify',function () {
 gulp.task('nodemon',function (nm) {
     var flag = false;
     return nodemon({
-        script:'./app.js'
+        script:'./server.js'
     }).on('start',function () {
         if(!flag){
             nm();
@@ -43,7 +43,7 @@ gulp.task('nodemon',function (nm) {
 gulp.task('browserSync',['nodemon'],function () {
     browserSync.init({
         proxy:{
-            target:'http://127.0.0.1:9996'
+            target:'http://127.0.0.1:6912'
         },
         files:['*'],
         port:9888,

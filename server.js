@@ -12,8 +12,8 @@ var app = express();
 app.use('/',express.static(path.join(__dirname,'views')));
 app.use('/public',express.static(path.join(__dirname,'public')));
 //指定端口号，建议3000以上,回调函数可以不写
-app.listen(9996,function (){
-    console.log('server run at port 9996')
+app.listen(6912,function (){
+    console.log('server run at port 6912')
 });
 
 //模块导出
